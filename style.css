@@ -1,0 +1,662 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+header 
+{
+  width: 1140px;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  height: 50px;
+  align-items: center;
+}
+  
+header .logo
+{
+  font-weight: bold;
+}  
+  
+body
+{
+  overflow: visible;
+  line-height: 1.5;
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: Poppins;
+
+}
+
+/* Global Variables are declared here */
+:root
+{
+  --item1-transform: translateX(-100%) translateY(-5%) scale(1.5);
+  --item1-filter: blur(30px);
+  --item1-zIndex: 11;
+  --item1-opacity: 0;
+
+  --item2-transform: translateX(0);
+  --item2-filter: blur(0px);
+  --item2-zIndex: 10;
+  --item2-opacity: 1;
+
+  --item3-transform: translate(50%, 10%) scale(0.8);
+  --item3-filter: blur(10px);
+  --item3-zIndex: 9;
+  --item3-opacity: 1;
+
+  --item4-transform: translate(90%, 20%) scale(0.5);
+  --item4-filter: blur(30px);
+  --item4-zIndex: 8;
+  --item4-opacity: 1;
+
+  --item5-transform: translate(120%, 30%) scale(0.3);
+  --item5-filter: blur(40px);
+  --item5-zIndex: 7;
+  --item5-opacity: 0;
+
+  /* Color Pallette */
+  /* Salmon Red:  #FA8072 */
+  /* Light Blue: */
+
+
+
+  --text-color: #a4ac85;
+  --text2-color: #333d2a;
+  --background-color: #ffffff;
+  --highlight-color: yellow;
+  --hightlight-color2: brown;
+
+}
+
+header
+{
+  color:var(--text-color);
+}
+
+/* Links */
+header nav a
+{
+  margin-left: 30px;
+  text-decoration: none;
+  color: var(--text2-color);
+  font-weight: 500;
+}
+
+/* Carousel */
+.carousel
+{
+  /* Sets the carousel class's position to relative causing any child elements to be positioned relative to this class */ 
+  position: relative;
+  height: 80vh;
+  /* Hides parts of the image that goes past the boundary */
+  overflow: hidden;
+  margin-top: -50px;
+
+}
+.carousel .list
+{
+  /* Positioned relative to .carousel */
+  position: absolute;
+  width: 100%;
+  max-width: 90%;
+  height: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease; /* Smooth transition during scroll animations */
+  
+  ;
+  border-color: red;
+}
+.carousel .list .item
+{
+  position: absolute;
+  left: 0%;
+  width: 70%;
+  height: 100%;
+  font-size: 15px;
+  transition: left 0.5s, opacity 0.5s, width 0.5s;
+  transition: transform 0.5s ease; /* Smooth transition during scroll animations */
+  
+}
+
+/* Select every child from the 6th item onwards 
+   :nth-child is native in CSS to select elements based on the parent
+    n is also native (not just a random named variable) that acts as a counter */
+.carousel .list .item:nth-child(n + 6)
+{
+  opacity: 0;
+}
+.carousel .list .item:nth-child(2)
+{
+  z-index: 10;
+  /* Sets position(x axis) of item to default */
+  transform: translateX(0);
+  
+}
+.carousel .list .item img
+{
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right 1.5s;
+}
+
+.carousel .list .item .introduce
+{
+  opacity: 0;
+  color: var(--text-color);
+  pointer-events: none;
+}
+.carousel .list .item:nth-child(2) .introduce
+{
+  opacity: 1;
+  pointer-events: auto;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.5s;
+}
+.carousel .list .item .introduce .title
+{
+  font-size: 1.8em;
+  font-weight: 500;
+  line-height: 1em;
+  
+}
+.carousel .list .item .introduce .topic
+{
+  font-size: 4em;
+  font-weight: 500;
+}
+.carousel .list .item .introduce .des 
+{
+  font-size: small;
+  color: var(--text2-color);
+}
+.carousel .list .item .introduce .seeMore 
+{
+  font-family: Poppins;
+  margin-top: 1.2em;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 1px solid #555;
+  background-color: transparent;
+  font-weight: bold;
+  letter-spacing: 3px;
+  transition: background 0.5s;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transition for smooth animation */
+  
+}
+
+.carousel .list .item .introduce .seeMore:hover 
+{
+  background: #eee;
+  background-color: rgb(253, 223, 146);
+  border-color: var(--hightlight-color2);
+}
+.carousel .list .item:nth-child(1) 
+{
+  transform: var(--item1-transform);
+  filter: var(--item1-filter);
+  z-index: var(--item1-zIndex);
+  opacity: var(--item1-opacity);
+  pointer-events: none;
+}
+.carousel .list .item:nth-child(3) 
+{
+  transform: var(--item3-transform);
+  filter: var(--item3-filter);
+  z-index: var(--item3-zIndex);
+}
+.carousel .list .item:nth-child(4) 
+{
+  transform: var(--item4-transform);
+  filter: var(--item4-filter);
+  z-index: var(--item4-zIndex);
+}
+.carousel .list .item:nth-child(5) 
+{
+  transform: var(--item5-transform);
+  filter: var(--item5-filter);
+  opacity: var(--item5-opacity);
+  pointer-events: none;
+}
+/* animation text in item2 */
+.carousel .list .item:nth-child(2) .introduce .title,
+.carousel .list .item:nth-child(2) .introduce .topic,
+.carousel .list .item:nth-child(2) .introduce .des,
+.carousel .list .item:nth-child(2) .introduce .seeMore
+{
+  opacity: 0;
+  animation: showContent 0.5s 1s ease-in-out 1 forwards;
+}
+
+/* Defining the animation */
+@keyframes showContent
+{
+  from
+  {
+    transform: translateY(-30px);
+    filter: blur(10px);
+  }
+  to
+  {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+.carousel .list .item:nth-child(2) .introduce .topic
+{
+  animation-delay: 1.2s;
+  color: var(--text-color);
+}
+.carousel .list .item:nth-child(2) .introduce .des
+{
+  animation-delay: 1.4s;
+}
+.carousel .list .item:nth-child(2) .introduce .seeMore
+{
+  animation-delay: 1.6s;
+}
+
+/* Triggered when next button is clicked */
+/* Causes every item to move simultaneously */
+.carousel.next .item:nth-child(1)
+{
+  animation: transformFromPosition2 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes transformFromPosition2
+{
+  from
+  {
+    transform: var(--item2-transform);
+    filter: var(--item2-filter);
+    opacity: var(--item2-opacity);
+  }
+}
+.carousel.next .item:nth-child(2)
+{
+  animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition3 
+{
+  from 
+  {
+    transform: var(--item3-transform);
+    filter: var(--item3-filter);
+    opacity: var(--item3-opacity);
+  }
+}
+.carousel.next .item:nth-child(3)
+{
+  animation: transformFromPosition4 0.9s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition4
+{
+  from
+  {
+    transform: var(--item4-transform);
+    filter: var(--item4-filter);
+    opacity: var(--item4-opacity);
+  }
+}
+.carousel.next .item:nth-child(4)
+{
+  animation: transformFromPosition5 1.1s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition5
+{
+  from
+  {
+    transform: var(--item5-transform);
+    filter: var(--item5-filter);
+    opacity: var(--item5-opacity);
+  }
+}
+/* previous */
+.carousel.prev .list .item:nth-child(5)
+{
+  animation: transformFromPosition4 0.5s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(4)
+{
+  animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(3)
+{
+  animation: transformFromPosition2 0.9s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(2)
+{
+  animation: transformFromPosition1 1.1s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition1
+{
+  from {
+    transform: var(--item1-transform);
+    filter: var(--item1-filter);
+    opacity: var(--item1-opacity);
+  }
+}
+
+/* detail  */
+.carousel .list .item .detail
+{
+  opacity: 0;
+  
+  pointer-events: none;
+  color: var(--text2-color);
+}
+/* showDetail */
+.carousel.showDetail .list .item:nth-child(3),
+.carousel.showDetail .list .item:nth-child(4)
+{
+  left: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.carousel.showDetail .list .item:nth-child(2)
+{
+  width: 100%;
+}
+.carousel.showDetail .list .item:nth-child(2) .introduce
+{
+  opacity: 0;
+  pointer-events: none;
+  color: var(--text-color);
+}
+
+/* Image Position in 'See More' */
+.carousel.showDetail .list .item:nth-child(2) img
+{
+  right: 70%;
+
+  
+}
+.carousel.showDetail .list .item:nth-child(2) .detail
+{
+  opacity: 1;
+  width: 60%;
+  position: absolute;
+  right: 5%;
+  top: 45%;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  text-align: center;
+  
+  
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .title
+{
+  font-size: 4em;
+  color: var(--text-color);
+  position: relative;
+  text-align: center;
+  
+  
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications
+{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  border-top: 1px solid #5553;
+  margin-top: 40%;
+  color: var(--text-color);
+  
+  
+}
+
+/* Features Information Table */
+
+.features 
+
+{
+  position: relative;
+  top: 20px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  
+
+
+  border: var(--highlight-color2);/*border around the content 
+  ;
+
+  width: 100%; /* Ensure it spans the feature div */
+
+}
+
+.features table
+{
+  
+  width : 100%;
+  font-size: 10;
+  word-wrap: break-word; /* Prevents overflow */
+  white-space: normal; /* Ensures text wraps */
+  font-size: 1em;
+}
+
+
+
+
+/* Fixed width for columns 1 and 4 (icons) */
+.features table td:nth-child(1), .features table td:nth-child(4)
+{
+  width: 24px; /* Set a fixed width for specific columns */
+}
+
+/* Titles */
+tr:nth-child(2), tr:nth-child(4), tr:nth-child(6)
+{
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 14;
+}
+
+/* Descriptions */
+tr:nth-child(3), tr:nth-child(5), tr:nth-child(7)
+{
+  color: var(--text2-color);
+  vertical-align: top;
+  position: relative;
+  top: -10px;
+}
+
+/* Column 3 */
+
+.features table td:nth-child(3)
+{
+  background-color: var(--text-color);
+  width: 0rem;;
+  table-layout: fixed;
+ 
+  
+  
+}
+
+.icon
+{
+  /* all of these are to override the image changes */
+  position: static !important; /* Reset the absolute positioning */
+  width: auto !important; /* Prevent the 50% width from applying */
+  transform: none !important; /* Remove unwanted transformation */
+  transition: none !important; /* Disable animation effects */
+  border-style:none !important;
+
+  width: 15px; /* Adjust as needed */
+  height: 15px;
+  
+}
+
+td img
+{
+  max-width: 100%; /* Ensures image does not overflow */
+  max-height: 100%; /* Prevents images from stretching */
+  display: block; /* Prevents unwanted space */
+  margin: 0 auto; /* Centers the image horizontally */
+  opacity: 0;
+}
+
+
+
+.carousel.showDetail
+  .list
+  .item:nth-child(2)
+  .detail
+  .specifications
+  div
+  p:nth-child(1)
+{
+  font-weight: bold;
+}
+.carousel.carousel.showDetail .list .item:nth-child(2) .checkout button
+{
+  font-family: Poppins;
+  background-color: transparent;
+  border: 1px solid #5555;
+  margin-left: 5px;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  position: absolute;  /* Absolute instead of relative */
+  left: 40%;           /* Center horizontally */
+  bottom: -100px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transition for smooth animation */
+}
+  .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:hover
+{
+  background-color: yellowgreen;
+  border-color: var(--hightlight-color);
+  transform: scale(1.1); /* Slightly enlarge the button */
+  transition: all 0.3s ease-in-out;
+}
+.carousel.carousel.showDetail
+  .list
+  .item:nth-child(2)
+  .checkout
+  button:nth-child(2)
+{
+  background-color: #693eff;
+  color: #eee;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .title,
+.carousel.showDetail .list .item:nth-child(2) .detail .des,
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications,
+.carousel.showDetail .list .item:nth-child(2) .detail .checkout
+{
+  opacity: 0;
+  animation: showContent 0.5s 1s ease-in-out 1 forwards;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .des
+{
+  animation-delay: 1.2s;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications
+{
+  animation-delay: 1.4s;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .checkout
+{
+  animation-delay: 1.6s;
+}
+
+/* Set Arrows Properties */
+
+.arrows
+{
+  position: absolute;
+  bottom: 5vh;
+  width: 100%;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-color);
+}
+
+#prev, #next
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-family: monospace;
+  border: 1px solid var(--text-color);
+  font-size: large;
+  bottom: 20%;
+  left: 10%;
+}
+#next
+{
+  left: unset;
+  right: 10%;
+}
+#back
+{
+  position: absolute;
+  z-index: 100;
+  bottom: -90%;
+  left: 6%;
+  transform: translateX(-50%);
+  border: none;
+  border-bottom: 1px solid #555;
+  font-family: Poppins;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background-color: transparent;
+  padding: 10px;
+  /* opacity: 0; */
+  transition: opacity 0.5s;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Transition for smooth animation */
+  color: var(--text-color);
+}
+#back:hover{
+  background-color: goldenrod;
+  border-color: var(--hightlight-color2);
+  
+ 
+  
+}
+.carousel.showDetail #back
+{
+  opacity: 1;
+  
+  
+}
+.carousel.showDetail #prev,
+.carousel.showDetail #next
+{
+  opacity: 0;
+  pointer-events: none;
+}
+.carousel::before
+{
+  width: 500px;
+  height: 300px;
+  content: "";
+  background-image: linear-gradient(70deg, var(--highlight-color), var(--hightlight-color2));
+  position: absolute;
+  z-index: -1;
+  border-radius: 20% 30% 80% 10%;
+  filter: blur(150px);
+  top: 50%;
+  left: 40%;
+  transform: translate(-10%, -50%);
+  transition: 1.5s;
+}
+.carousel.showDetail::before
+{
+  transform: translate(-120%, -50%) rotate(90deg);
+  filter: blur(130px);
+}

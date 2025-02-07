@@ -1,0 +1,99 @@
+
+/* 
+  13) Tablet (up to 991px) 
+*/
+@media screen and (max-width: 991px) {
+  .carousel .list .item {
+    width: 90%;
+  }
+  .big-card-header h1 {
+    font-size: 20px;
+  }
+  .big-card-header p {
+    font-size: 14px;
+  }
+  .checkout button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  /* Let’s reduce image size a bit so it fits with the big card */
+  .carousel.showDetail .list .item:nth-child(2) img {
+    width: 30%;
+    left: 5%;
+  }
+  .carousel.showDetail .list .item:nth-child(2) .big-card {
+    width: 50%;
+    right: 3%;
+  }
+}
+
+/* 
+  14) Mobile (up to 767px) 
+   Stack the image and big card vertically
+*/
+@media screen and (max-width: 991px) {
+    /* mobile */
+    :root {
+      --item1-transform: translateY(-50%) translateX(0%) scale(1.2); /* Adjusted transform */
+      --item3-transform: translateY(20%) translateX(15%) scale(0.8);
+      --item4-transform: translateY(40%) translateX(25%) scale(0.5);
+      --item5-transform: translateY(60%) translateX(35%) scale(0.3);
+    }
+  
+    .carousel {
+      height: 80vh; /* Adjusted height for mobile */
+    }
+  
+    .carousel .list .item {
+      width: 90%;
+      font-size: 10px;
+    }
+  
+    .carousel .list .item img {
+      width: 70%; /* Adjusted for mobile image sizes */
+      margin: 0 auto; /* Center image */
+      display: block;
+    }
+  
+    .carousel .list .item .introduce {
+      width: 250px;
+    }
+  
+    .arrows {
+      bottom: 5vh; /* Adjusted positioning */
+    }
+  
+    .carousel .list .item {
+      width: 100%;
+      font-size: 10px;
+    }
+  
+    .carousel .list {
+      height: 100%;
+    }
+    .carousel .list .item:nth-child(2) .introduce {
+      width: 50%;
+    }
+  
+    .carousel .list .item img {
+      width: 40%;
+    }
+    .carousel.showDetail .list .item:nth-child(2) .detail {
+      backdrop-filter: blur(10px);
+      font-size: small;
+    }
+    .carousel .list .item:nth-child(2) .introduce .des,
+    .carousel.showDetail .list .item:nth-child(2) .detail .des {
+      height: 100px;
+      overflow: auto;
+  
+    }
+  
+    
+    .carousel.showDetail .list .item:nth-child(2) .detail .checkout {
+      display: flex;
+      width: max-content;
+      float: right;
+    }
+  }

@@ -1,0 +1,166 @@
+/* Base Styles for mobile devices (small screens) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel .list {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel .item {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.carousel .item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.introduce {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.introduce .title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.introduce .topic {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.introduce .des {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.arrows button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+#back {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+    background-color: #007bff;
+}
+
+#back:hover {
+    background-color: #0056b3;
+}
+
+/* Adjustments for tablet and up */
+@media (min-width: 600px) {
+    .carousel .item {
+        flex: 0 0 50%; /* Show two items per row */
+    }
+
+    .introduce .title {
+        font-size: 1.8em;
+    }
+
+    .introduce .topic {
+        font-size: 1.4em;
+    }
+}
+
+/* Adjustments for iPad (large tablets) */
+@media (min-width: 768px) {
+    .carousel .item {
+        flex: 0 0 33.33%; /* Show three items per row */
+    }
+
+    .introduce .title {
+        font-size: 2em;
+    }
+
+    .introduce .topic {
+        font-size: 1.5em;
+    }
+}
+
+/* Desktop Devices */
+@media (min-width: 1024px) {
+    .carousel .item {
+        flex: 0 0 25%; /* Show four items per row */
+    }
+
+    .introduce .title {
+        font-size: 2.5em;
+    }
+
+    .introduce .topic {
+        font-size: 1.8em;
+    }
+
+    .introduction, .specifications, .checkout {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
