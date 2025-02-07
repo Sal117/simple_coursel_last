@@ -189,16 +189,10 @@ header nav a
   letter-spacing: 3px;
   transition: background 0.5s;
   color: var(--text-color);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out; /* Transition for smooth animation */
-  
 }
-
 .carousel .list .item .introduce .seeMore:hover 
 {
   background: #eee;
-  background-color: rgb(253, 223, 146);
-  border-color: var(--hightlight-color2);
 }
 .carousel .list .item:nth-child(1) 
 {
@@ -351,7 +345,6 @@ header nav a
 .carousel .list .item .detail
 {
   opacity: 0;
-  
   pointer-events: none;
   color: var(--text2-color);
 }
@@ -392,7 +385,6 @@ header nav a
   pointer-events: auto;
   text-align: center;
   
-  
 }
 .carousel.showDetail .list .item:nth-child(2) .detail .title
 {
@@ -412,46 +404,33 @@ header nav a
   margin-top: 40%;
   color: var(--text-color);
   
-  
 }
 
 /* Features Information Table */
-
 .features 
-
 {
   position: relative;
   top: 20px;
   height: 300px;
   display: flex;
   justify-content: center;
-  
-
-
-  border: var(--highlight-color2);/*border around the content 
-  ;
-
+  border: var(--highlight-color2);
   width: 100%; /* Ensure it spans the feature div */
-
 }
-
 .features table
 {
-  
   width : 100%;
   font-size: 10;
   word-wrap: break-word; /* Prevents overflow */
   white-space: normal; /* Ensures text wraps */
+  /*ADDed NEW */
   font-size: 1em;
 }
-
-
-
 
 /* Fixed width for columns 1 and 4 (icons) */
 .features table td:nth-child(1), .features table td:nth-child(4)
 {
-  width: 24px; /* Set a fixed width for specific columns */
+  width: 50px; /* Set a fixed width for specific columns */
 }
 
 /* Titles */
@@ -478,9 +457,7 @@ tr:nth-child(3), tr:nth-child(5), tr:nth-child(7)
   background-color: var(--text-color);
   width: 0rem;;
   table-layout: fixed;
- 
-  
-  
+
 }
 
 .icon
@@ -531,15 +508,16 @@ td img
   left: 40%;           /* Center horizontally */
   bottom: -100px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out; /* Transition for smooth animation */
+  transition: all 0.3s ease-in-out; /* Transition for smooth animation */  
 }
-  .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:hover
+.carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:hover
 {
-  background-color: yellowgreen;
+  background-color: var(--text-color);
   border-color: var(--hightlight-color);
   transform: scale(1.1); /* Slightly enlarge the button */
   transition: all 0.3s ease-in-out;
 }
+
 .carousel.carousel.showDetail
   .list
   .item:nth-child(2)
@@ -617,17 +595,15 @@ td img
   padding: 10px;
   /* opacity: 0; */
   transition: opacity 0.5s;
+  color: var(--text-color);
   cursor: pointer;
   transition: all 0.3s ease-in-out; /* Transition for smooth animation */
-  color: var(--text-color);
 }
 #back:hover{
-  background-color: goldenrod;
-  border-color: var(--hightlight-color2);
-  
- 
-  
+  background-color: var(--text2-color);
+  border-color: var(--hightlight-color2);  
 }
+
 .carousel.showDetail #back
 {
   opacity: 1;
@@ -659,4 +635,65 @@ td img
 {
   transform: translate(-120%, -50%) rotate(90deg);
   filter: blur(130px);
+}
+
+/* Adjust website for larger screens */
+@media screen and (min-height: 900px)
+{
+  .carousel
+  {
+    height: 100vh; /* Ensure the carousel stretches to full screen height */
+  }
+  .carousel .list .item
+  {
+    min-height: 100vh; /* Ensures individual items stretch as well */
+  }
+}
+  
+@media screen and (max-width: 991px) {
+  /* ipad, tablets */
+  .carousel .list .item {
+    width: 90%;
+  }
+  .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
+    overflow: auto;
+  }
+  .carousel.showDetail .list .item:nth-child(2) .detail .title {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* mobile */
+  .carousel {
+    height: 600px;
+  }
+  .carousel .list .item {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .carousel .list {
+    height: 100%;
+  }
+  .carousel .list .item:nth-child(2) .introduce {
+    width: 50%;
+  }
+
+  .carousel .list .item img {
+    width: 40%;
+  }
+  .carousel.showDetail .list .item:nth-child(2) .detail {
+    backdrop-filter: blur(10px);
+    font-size: small;
+  }
+  .carousel .list .item:nth-child(2) .introduce .des,
+  .carousel.showDetail .list .item:nth-child(2) .detail .des {
+    height: 100px;
+    overflow: auto;
+  }
+  .carousel.showDetail .list .item:nth-child(2) .detail .checkout {
+    display: flex;
+    width: max-content;
+    float: right;
+  }
 }
