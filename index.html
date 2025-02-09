@@ -1,11 +1,19 @@
-
+<!DOCTYPE html>
 <html>
 <head>
+    <!-- 
+      Link to the main stylesheet and the mobile-specific stylesheet.
+      These files control the look and feel of our page.
+    -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
 </head>
 
 <body>
+    <!-- 
+      Header Section:
+      Contains our logo and primary navigation links.
+    -->
     <header>
         <div class="logo">Relationary</div>
         <nav>
@@ -15,12 +23,23 @@
         </nav>  
     </header>
     
-    <!-- Carousel -->
+    <!-- 
+      Carousel Section:
+      This is our main interactive carousel. It displays multiple items (slides),
+      each representing a service or offering. Users can navigate through these slides
+      using arrows, swipes, or by clicking on the dot indicators.
+    -->
     <div class="carousel" id="carousel">
+        <!-- The container that holds all the carousel items. -->
         <div class="list">
-            <!--First item (Hidden to the left of item 2)-->
+
+            <!-- 
+              Item 1:
+              Each carousel item is a complete block with an image, introduction, and detailed view.
+              The "introduce" section shows a brief overview, and clicking "SEE MORE" expands details.
+            -->
             <div class="item">
-                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/19-removebg-preview.png">
+                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/19-removebg-preview.png" alt="Psychological Assessments">
                 <div class="introduce">
                     <div class="title">Insightful Evaluations for Growth and Understanding</div>
                     <div class="topic">Comprehensive Psychological Assessments</div>
@@ -28,7 +47,7 @@
                         <!-- General Description -->
                         We offer thorough psychological assessments to understand cognitive, emotional, and behavioral functioning. Our evaluations guide personalized recommendations for therapy, education, and personal development, empowering individuals and families with valuable insights for growth.
                     </div>
-                    <!-- Opens up details of the item-->
+                    <!-- Opens up details of the item -->
                     <button class="seeMore">SEE MORE ↗</button>
                 </div>
                 <div class="detail">
@@ -38,38 +57,23 @@
                         Insightful evaluations to understand cognitive, emotional, and behavioral functioning, guiding personalized therapy, education, and development strategies.
                     </div>
                 
-                    <!-- Features Information-->
+                    <!-- Features Information -->
                     <div class="features"> 
                         <table>
-                            <th class="fixed-column"></th>
-                            <th class="flexible-column"></th>
-                            <th class="flexible-column"></th>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>IQ & Education Assessments</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Behavioral & Emotional Assessments</td>
+                                <td class="feature-title">IQ & Education Assessments</td>
+                                <td class="feature-title">Behavioral & Emotional Assessments</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td>Identifying strengths and challenges for academic success.</td>  
-                                <td></td>
-                                <td></td>
+                                <td>Identifying strengths and challenges for academic success.</td>
                                 <td>Understanding mood and behavioral patterns.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Developmental Evaluations</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>ADHD & Attention Assessments</td>
+                                <td class="feature-title">Developmental Evaluations</td>
+                                <td class="feature-title">ADHD & Attention Assessments</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Assessing milestones and concerns for tailored support.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Clarifying focus-related challenges and solutions.</td>
                             </tr>
                         </table>
@@ -78,12 +82,15 @@
                         <button>Book Now!</button>
                     </div>
                 </div>
-                
             </div>
 
-            <!-- Item 2 (Main one)-->
+            <!-- 
+              Item 2:
+              This slide focuses on individual therapy and coaching services.
+              It includes a general description and an option to see more details.
+            -->
             <div class="item">
-                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/4-removebg-preview.png">
+                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/4-removebg-preview.png" alt="Therapy and Coaching">
                 <div class="introduce">
                     <div class="title">Therapy and Coaching</div>
                     <div class="topic">Individual</div>
@@ -93,7 +100,6 @@
                     </div>
                     <button class="seeMore">SEE MORE ↗</button>
                 </div>
-                <!--The detil of each item starts-->
                 <div class="detail">
                     <div class="title">Individual Therapy</div>
                     <div class="des">
@@ -101,52 +107,31 @@
                         We offer a supportive space to help you overcome challenges, enhance relationships, and rediscover purpose. Our therapy empowers you to lead a fulfilling and balanced life.
                     </div>
 
-                    <!-- Features Information-->
-                    <div class = "features"> 
+                    <!-- Features Information -->
+                    <div class="features"> 
                         <table>
-                                <th class="fixed-column"></th>
-                                <th class="flexible-column"></th>
-                                <th class="flexible-column"></th>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Overcoming Depression</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Managing Anxiety</td>
+                                <td class="feature-title">Overcoming Depression</td>
+                                <td class="feature-title">Managing Anxiety</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td>Regain joy, motivation, and the ability to enjoy life fully.</td>  
-                                <td></td>
-                                <td></td>
+                                <td>Regain joy, motivation, and the ability to enjoy life fully.</td>
                                 <td>Feel calm and confident by reducing fear and worry.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Navigating Trauma</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Finding Life Purpose</td>
+                                <td class="feature-title">Navigating Trauma</td>
+                                <td class="feature-title">Finding Life Purpose</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Heal emotionally to rebuild trust and grow stronger.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Gain clarity and align your life with your values.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Boosting Self-Confidence</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Grief and Loss</td>
+                                <td class="feature-title">Boosting Self-Confidence</td>
+                                <td class="feature-title">Grief and Loss</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Empower yourself to face challenges and pursue goals.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Find peace and strength to move forward after loss.</td>
                             </tr>
                         </table>
@@ -157,11 +142,15 @@
                 </div>
             </div>
 
-            <!-- Item 3 -->
+            <!-- 
+              Item 3:
+              This slide offers couple therapy services.
+              The content is structured similarly with a brief introduction and expanded details.
+            -->
             <div class="item">
-                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/10-removebg-preview.png">
+                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/10-removebg-preview.png" alt="Couple Therapy">
                 <div class="introduce">
-                    <div class="title">PERSONAL</div>
+                    <div class="title">Therapy and Coaching</div>
                     <div class="topic">Couple Therapy</div>
                     <div class="des">
                         <!-- General Description -->
@@ -176,66 +165,39 @@
                         Strengthen your relationship with expert guidance designed to help partners navigate challenges, resolve conflicts, and rebuild trust.
                     </div>
                 
-                    <!-- Features Information-->
+                    <!-- Features Information -->
                     <div class="features"> 
                         <table>
-                            <th class="fixed-column"></th>
-                            <th class="flexible-column"></th>
-                            <th class="flexible-column"></th>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Improve Communication</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Resolve Conflicts</td>
+                                <td class="feature-title">Improve Communication</td>
+                                <td class="feature-title">Resolve Conflicts</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td>Enhance emotional connection and understanding.</td>  
-                                <td></td>
-                                <td></td>
+                                <td>Enhance emotional connection and understanding.</td>
                                 <td>Manage disagreements constructively to reduce tension.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Rebuild Trust After Adultery</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Prevent Separation or Divorce</td>
+                                <td class="feature-title">Rebuild Trust After Adultery</td>
+                                <td class="feature-title">Prevent Separation or Divorce</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Heal from infidelity and rebuild the relationship.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Address underlying issues and strengthen bonds.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Enhance Intimacy</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Parenting Support</td>
+                                <td class="feature-title">Enhance Intimacy</td>
+                                <td class="feature-title">Parenting Support</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Foster emotional and physical closeness.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Navigate parenting challenges together effectively.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Develop Coping Skills</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Mediation for Separation or Divorce</td>
+                                <td class="feature-title">Develop Coping Skills</td>
+                                <td class="feature-title">Mediation for Separation or Divorce</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Build resilience and stress management techniques.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Support amicable decision-making and life transitions.</td>
                             </tr>
                         </table>
@@ -244,19 +206,21 @@
                         <button>Book Now!</button>
                     </div>
                 </div>
-                
             </div>
 
-            <!-- Item 4 -->
+            <!-- 
+              Item 4:
+              This slide focuses on youth therapy, offering support for young minds.
+            -->
             <div class="item">
-                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/14-removebg-preview.png">
+                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/14-removebg-preview.png" alt="Youth Therapy">
                 <div class="introduce">
-                    <div class="title">Youth Therapy</div>
-                    <div class="topic">Helping Young Minds Thrive</div>
+                    <div class="title">Helping Young Minds Thrive</div>
+                    <div class="topic">Youth Therapy</div>
                     <div class="des">
-        <!-- General Description -->
-                     We provide compassionate, evidence-based support to help children and teens navigate anxiety, depression, behavioral challenges, and emotional well-being. Our goal is to foster resilience, self-confidence, and healthy relationships for a brighter future.
-                     </div>
+                        <!-- General Description -->
+                        We provide compassionate, evidence-based support to help children and teens navigate anxiety, depression, behavioral challenges, and emotional well-being. Our goal is to foster resilience, self-confidence, and healthy relationships for a brighter future.
+                    </div>
                     <button class="seeMore">SEE MORE ↗</button>
                 </div>
                 <div class="detail">
@@ -266,66 +230,39 @@
                         Helping children and teens develop emotional resilience, confidence, and well-being through evidence-based therapeutic support.
                     </div>
                 
-                    <!-- Features Information-->
+                    <!-- Features Information -->
                     <div class="features"> 
                         <table>
-                            <th class="fixed-column"></th>
-                            <th class="flexible-column"></th>
-                            <th class="flexible-column"></th>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Anxiety & Stress Management</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Depression & Mood Support</td>
+                                <td class="feature-title">Anxiety & Stress Management</td>
+                                <td class="feature-title">Depression & Mood Support</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td>Tools to cope with panic attacks, phobias, and stress.</td>  
-                                <td></td>
-                                <td></td>
+                                <td>Tools to cope with panic attacks, phobias, and stress.</td>
                                 <td>Guidance for emotional stability.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Anger & Behavior Control</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Healthy Eating Habits</td>
+                                <td class="feature-title">Anger & Behavior Control</td>
+                                <td class="feature-title">Healthy Eating Habits</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Support in developing healthy emotional expression.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Encouragement for balanced nutrition and self-care.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Motivation & Engagement</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Focus & Attention Support</td>
+                                <td class="feature-title">Motivation & Engagement</td>
+                                <td class="feature-title">Focus & Attention Support</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Reignite interest in learning and activities.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Enhance concentration and engagement.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Confidence & Self-Esteem</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Trauma & Emotional Healing</td>
+                                <td class="feature-title">Confidence & Self-Esteem</td>
+                                <td class="feature-title">Trauma & Emotional Healing</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Foster self-worth and personal empowerment.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Safe support for processing past experiences.</td>
                             </tr>
                         </table>
@@ -334,12 +271,14 @@
                         <button>Book Now!</button>
                     </div>
                 </div>
-                
             </div>
 
-            <!-- Item 5 -->
+            <!-- 
+              Item 5:
+              This item focuses on family therapy and parenting, aimed at strengthening family bonds.
+            -->
             <div class="item">
-                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/20-removebg-preview.png">
+                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/20-removebg-preview.png" alt="Parenting and Family Therapy">
                 <div class="introduce">
                     <div class="title">Parenting</div>
                     <div class="topic">Family Therapy</div>
@@ -356,66 +295,39 @@
                         Strengthen family connections and create a harmonious home environment with our tailored therapy services.
                     </div>
                 
-                    <!-- Features Information-->
+                    <!-- Features Information -->
                     <div class="features"> 
                         <table>
-                            <th class="fixed-column"></th>
-                            <th class="flexible-column"></th>
-                            <th class="flexible-column"></th>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Improve Family Quality Time</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Resolve Conflicts</td>
+                                <td class="feature-title">Improve Family Quality Time</td>
+                                <td class="feature-title">Resolve Conflicts</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td>Create meaningful and enjoyable moments together.</td>  
-                                <td></td>
-                                <td></td>
+                                <td>Create meaningful and enjoyable moments together.</td>
                                 <td>Manage and resolve family disagreements constructively.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Co-Parenting Support</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Scream-Free Parenting</td>
+                                <td class="feature-title">Co-Parenting Support</td>
+                                <td class="feature-title">Scream-Free Parenting</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Ensure a unified approach for children’s well-being.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Foster a peaceful and supportive home environment.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Elevate Parent-Child Bond</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Strengthen Parental Partnership</td>
+                                <td class="feature-title">Elevate Parent-Child Bond</td>
+                                <td class="feature-title">Strengthen Parental Partnership</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Strengthen relationships through positive interactions.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Enhance the connection between parents.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Perinatal Mood Support</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Create Shared Dreams</td>
+                                <td class="feature-title">Perinatal Mood Support</td>
+                                <td class="feature-title">Create Shared Dreams</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Assist new parents in navigating emotional challenges.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Work towards unified family goals.</td>
                             </tr>
                         </table>
@@ -424,20 +336,21 @@
                         <button>Book Now!</button>
                     </div>
                 </div>
-                
             </div>
             
-            <!-- Item 6 -->
+            <!-- 
+              Item 6:
+              This slide highlights a creative therapy approach using sand play.
+            -->
             <div class="item">
-                <img src="/images/PlayTherapy.png">
+                <img src="/images/PlayTherapy.png" alt="Sand Play Therapy">
                 <div class="introduce">
-                    <div class="title">Sand Play Therapy</div>
-                    <div class="topic">Healing Through Creativity and Play</div>
+                    <div class="title">Healing Through Creativity and Play</div>
+                    <div class="topic">Sand Play Therapy</div>
                     <div class="des">
                         <!-- General Description -->
                         In Sand Play Therapy, children and adults create worlds in a sandbox, using miniatures to express thoughts and feelings. This non-verbal therapy taps into deep subconscious processes, facilitating healing from trauma, resolving internal conflicts, and fostering emotional resilience.
                     </div>
-                
                     <button class="seeMore">SEE MORE ↗</button>
                 </div>
                 <div class="detail">
@@ -447,38 +360,23 @@
                         A creative and non-verbal therapeutic approach using symbolic play to facilitate emotional healing.
                     </div>
                 
-                    <!-- Features Information-->
+                    <!-- Features Information -->
                     <div class="features"> 
                         <table>
-                            <th class="fixed-column"></th>
-                            <th class="flexible-column"></th>
-                            <th class="flexible-column"></th>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Emotional Expression & Healing</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Trauma Recovery</td>
+                                <td class="feature-title">Emotional Expression & Healing</td>
+                                <td class="feature-title">Trauma Recovery</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td>Safely explore emotions through creativity.</td>  
-                                <td></td>
-                                <td></td>
+                                <td>Safely explore emotions through creativity.</td>
                                 <td>Process past experiences gently.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Anxiety & Stress Relief</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Self-Discovery & Growth</td>
+                                <td class="feature-title">Anxiety & Stress Relief</td>
+                                <td class="feature-title">Self-Discovery & Growth</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Enhance emotional regulation and relaxation.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Encourage personal insight and empowerment.</td>
                             </tr>
                         </table>
@@ -487,16 +385,14 @@
                         <button>Book Now!</button>
                     </div>
                 </div>
-                
-
-                <!-- If adding more items start here-->
-            
             </div>
 
-            <!--New item -->
-
+            <!-- 
+              Item 7:
+              This final item provides details on corporate wellness through Employee Assistance Programs.
+            -->
             <div class="item">
-                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/19-removebg-preview.png">
+                <img src="https://staging.relationary.com/wp-content/uploads/2025/01/19-removebg-preview.png" alt="Corporate EAP">
                 <div class="introduce">
                     <div class="title">Supporting Workplace Well-Being and Productivity</div>
                     <div class="topic">Corporate Employee Assistance Programs (EAP)</div>
@@ -504,7 +400,6 @@
                         <!-- General Description -->
                         Our Corporate EAP services provide mental health support and resources to foster a healthier workplace. We collaborate with organizations to enhance employee well-being, resilience, and productivity, creating a supportive work culture that values mental health.
                     </div>
-                    <!-- Opens up details of the item-->
                     <button class="seeMore">SEE MORE ↗</button>
                 </div>
                 <div class="detail">
@@ -514,52 +409,31 @@
                         Supporting mental well-being and productivity in the workplace through customized solutions.
                     </div>
                 
-                    <!-- Features Information-->
+                    <!-- Features Information -->
                     <div class="features"> 
                         <table>
-                            <th class="fixed-column"></th>
-                            <th class="flexible-column"></th>
-                            <th class="flexible-column"></th>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Counseling & Mental Health Support</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Stress & Burnout Management</td>
+                                <td class="feature-title">Counseling & Mental Health Support</td>
+                                <td class="feature-title">Stress & Burnout Management</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td>Confidential support for employees.</td>  
-                                <td></td>
-                                <td></td>
+                                <td>Confidential support for employees.</td>
                                 <td>Coping strategies to prevent workplace exhaustion.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Conflict Resolution & Communication Skills</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Work-Life Balance Coaching</td>
+                                <td class="feature-title">Conflict Resolution & Communication Skills</td>
+                                <td class="feature-title">Work-Life Balance Coaching</td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Fostering healthier workplace interactions.</td>
-                                <td></td>
-                                <td></td>
                                 <td>Strategies to manage professional and personal responsibilities.</td>
                             </tr>
                             <tr>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td>Flexible Pricing Plans</td>
-                                <td></td>
-                                <td><img src="BulletPoint.png" class="icon"></td>
-                                <td></td>
+                                <td class="feature-title">Flexible Pricing Plans</td>
+                                <td class="feature-title"></td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td>Customizable services for organizations of all sizes.</td>
-                                <td></td>
-                                <td></td>
                                 <td></td>
                             </tr>
                         </table>
@@ -568,19 +442,95 @@
                         <button>Book Now!</button>
                     </div>
                 </div>
-                
-                
-                
             </div>
-        </div>
-        <!-- Adjust Buttons Visibility (Either here or JS)-->
+
+        </div> <!-- End of carousel list -->
+
+        <!-- 
+          Carousel Arrows / Buttons:
+          These buttons allow users to navigate between slides.
+          The "Back" button is used to exit the detail view.
+        -->
         <div class="arrows">
             <button id="prev"><</button>
             <button id="next">></button>
             <button id="back">Go Back  ↗</button>
         </div>
-    </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="script.js"></script>
-    </body>
+
+        <!-- 
+          Slide Indicators:
+          These dots represent each slide in the carousel.
+          They are updated dynamically based on the active slide.
+        -->
+        <div class="slide-indicators">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div> <!-- End of Carousel -->
+
+    <!-- 
+      Scripts:
+      We include jQuery from a CDN and our custom script file (script.js) which handles
+      the carousel interactions (clicks, swipes, detail view, etc.).
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
+
+<!--
+===============================================================
+Relationary Carousel Page Documentation
+===============================================================
+
+Overview:
+---------
+This HTML document implements a responsive carousel for the Relationary website.
+The carousel displays a series of service "slides" that each include an image, a brief
+introduction, and a detailed view with additional information. Users can navigate the
+carousel using arrow buttons, mouse wheel scrolling, or by clicking the dot indicators.
+A "SEE MORE" button on each slide expands that slide to reveal more details along with
+a "Book Now!" button.
+
+File Structure:
+---------------
+1. HEAD Section:
+   - Links to external stylesheets:
+     • style.css      - Primary styles for layout, typography, and desktop view.
+     • mobile.css     - Additional styles to ensure proper responsiveness on mobile devices.
+
+2. BODY Section:
+   - HEADER:
+     • Contains the website logo and a simple navigation menu with links (Home, Info, Contact).
+
+   - Carousel Container (<div class="carousel" id="carousel">):
+     • This is the main wrapper for the carousel functionality.
+     • Inside it, there is a <div class="list"> element that holds all the individual slide items.
+
+   - Slide Items (<div class="item">):
+     • Each slide represents a service offering and is structured as follows:
+       - An <img> tag displaying a representative image.
+       - A <div class="introduce"> block containing:
+           • <div class="title">   - The main title or headline.
+           • <div class="topic">   - A secondary title or topic.
+           • <div class="des">     - A short general description.
+           • A button with class "seeMore" that, when clicked, opens the detailed view.
+       - A <div class="detail"> block (initially hidden) that contains:
+           • A title and expanded description.
+           • A <div class="features"> block with a table that lists key features or service details.
+           • A <div class="checkout"> block with a "Book Now!" button.
+
+   - Carousel Navigation Elements:
+     • <div class="arrows"> contains three buttons:
+         - Button with id "prev" for navigating to the previous slide.
+         - Button with id "next" for navigating to the next slide.
+         - Button with id "back" for exiting the detail view (visible only when details are shown).
+     • <div class="slide-indicators"> holds a series of <span class="dot"> elements that
+       visually represent each slide and indicate which slide is currently active.
+     -->
+
