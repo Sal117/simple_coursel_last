@@ -1,166 +1,123 @@
-/* Base Styles for mobile devices (small screens) */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-}
-
-header .logo {
-    font-size: 1.5em;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel .list {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel .item {
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.carousel .item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.introduce {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.introduce .title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.introduce .topic {
-    font-size: 1.2em;
-    color: #555;
-}
-
-.introduce .des {
-    font-size: 0.9em;
-    margin-top: 10px;
-}
-
-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-.arrows button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 1.5em;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-#prev {
-    left: 10px;
-}
-
-#next {
-    right: 10px;
-}
-
-#back {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    display: none;
-    background-color: #007bff;
-}
-
-#back:hover {
-    background-color: #0056b3;
-}
-
-/* Adjustments for tablet and up */
-@media (min-width: 600px) {
-    .carousel .item {
-        flex: 0 0 50%; /* Show two items per row */
+/* 
+  13) Tablet (up to 991px) 
+*/
+@media screen and (max-width: 991px) {
+    .carousel .list .item {
+      width: 90%;
     }
-
-    .introduce .title {
-        font-size: 1.8em;
+    
+    .checkout button {
+      font-size: 12px;
+      padding: 8px 16px;
     }
-
-    .introduce .topic {
-        font-size: 1.4em;
+  
+    /* Let’s reduce image size a bit so it fits with the big card */
+    .carousel.showDetail .list .item:nth-child(2) img {
+      width: 30%;
+      left: 5%;
     }
-}
-
-/* Adjustments for iPad (large tablets) */
-@media (min-width: 768px) {
-    .carousel .item {
-        flex: 0 0 33.33%; /* Show three items per row */
+    .carousel.showDetail .list .item:nth-child(2) .big-card {
+      width: 50%;
+      right: 3%;
     }
-
-    .introduce .title {
-        font-size: 2em;
+  }
+  
+  
+  @media screen and (max-width: 991px) {
+      /* mobile */
+      :root {
+        --item1-transform: translateY(-50%) translateX(0%) scale(1.2); /* Adjusted transform */
+        --item3-transform: translateY(20%) translateX(15%) scale(0.8);
+        --item4-transform: translateY(40%) translateX(25%) scale(0.5);
+        --item5-transform: translateY(60%) translateX(35%) scale(0.3);
+      }
+    
+      .carousel {
+        height: auto;
+        margin: 20px auto;
+        padding: 10px;
+        overflow: visible;
+        position: static;
+      }
+      .carousel .list {
+        position: static;
+        width: 100%;
+        height: auto;
+        transform: none;
+        top: 0;
+        left: 0;
+      }
+    
+      .carousel .list .item {
+        
+        width: 90%;
+        font-size: 10px;
+      }
+    
+      .carousel .list .item img {
+        width: 70%; /* Adjusted for mobile image sizes */
+        margin: 0 auto; /* Center image */
+        display: block;
+      }
+    
+      .carousel .list .item .introduce {
+        width: 250px;
+      }
+    
+      .arrows {
+        bottom: 5vh; /* Adjusted positioning */
+      }
+    
+      .carousel .list .item {
+        width: 100%;
+        font-size: 10px;
+      }
+    
+      .carousel .list {
+        height: 100%;
+      }
+      .carousel .list .item:nth-child(2) .introduce {
+        width: 70%;
+        font-size:small;
+      }
+    
+      .carousel .list .item img {
+        width: 40%;
+      }
+      .carousel.showDetail .list .item:nth-child(2) .detail {
+        backdrop-filter: blur(10px);
+        font-size: small;
+      }
+      .carousel .list .item:nth-child(2) .introduce .des,
+    .carousel.showDetail .list .item:nth-child(2) .detail .des {
+        height: auto; /* Allow height to adjust to content */
+        overflow: visible; /* Prevent scrollbars */
+        max-height: none; /* Ensure no height limit is applied */
     }
-
-    .introduce .topic {
-        font-size: 1.5em;
-    }
-}
-
-/* Desktop Devices */
-@media (min-width: 1024px) {
-    .carousel .item {
-        flex: 0 0 25%; /* Show four items per row */
-    }
-
-    .introduce .title {
-        font-size: 2.5em;
-    }
-
-    .introduce .topic {
-        font-size: 1.8em;
-    }
-
-    .introduction, .specifications, .checkout {
-        max-width: 80%;
+    .carousel .list .item:nth-child(2) .introduce,
+    .carousel.showDetail .list .item:nth-child(2) .detail {
+        padding: 20px;
         margin: 0 auto;
     }
-}
+
+
+    
+      
+      .carousel.showDetail .list .item:nth-child(2) .detail .checkout {
+        display: flex;
+        width: max-content;
+        float: right;
+      }
+      .carousel .list .item .introduce .des,
+      .carousel.showDetail .list .item .detail .des {
+        height: auto;
+        overflow: visible;
+      }
+  }
+    
+    
+
+
+
+
